@@ -47,11 +47,12 @@ trait RegistersUsers
     /**
      * Get the guard to be used during registration.
      *
+     * @param  string|null  $name
      * @return \Illuminate\Contracts\Auth\StatefulGuard
      */
-    protected function guard()
+    protected function guard($name = null)
     {
-        return Auth::guard();
+        return Auth::guard($name);
     }
 
     /**
